@@ -1,0 +1,39 @@
+src/test/java/com/coolie/coolie_backend/DemoApplicationTests.java:7:class DemoApplicationTests {
+src/test/java/com/coolie/coolie_backend/DemoApplicationTests.java:10:	void contextLoads() {
+src/main/java/com/coolie/controller/CooliePowerHouse.java:12:public class CooliePowerHouse {
+src/main/java/com/coolie/controller/CooliePowerHouse.java:14:    private final CoolieSevai service;
+src/main/java/com/coolie/controller/CooliePowerHouse.java:16:    public CooliePowerHouse(CoolieSevai service) {
+src/main/java/com/coolie/controller/CooliePowerHouse.java:21:    public List<Coolie> getAllCoolies() {
+src/main/java/com/coolie/controller/CooliePowerHouse.java:26:    public Coolie getCoolie(@PathVariable Long id) {
+src/main/java/com/coolie/controller/CooliePowerHouse.java:31:    public Coolie addCoolie(@RequestBody Coolie e) {
+src/main/java/com/coolie/controller/CooliePowerHouse.java:36:    public Coolie updateCoolie(@PathVariable Long id, @RequestBody Coolie e) {
+src/main/java/com/coolie/controller/CooliePowerHouse.java:41:    public void deleteCoolie(@PathVariable Long id) {
+src/main/java/com/coolie/repository/CoolieGoodDown.java:3:public class CoolieGoodDown {
+src/main/java/com/coolie/service/CoolieSevai.java:8:public class CoolieSevai {
+src/main/java/com/coolie/service/CoolieSevai.java:9:    private final Map<Long, Coolie> coolieMap = new HashMap<>();
+src/main/java/com/coolie/service/CoolieSevai.java:11:    public CoolieSevai() {
+src/main/java/com/coolie/service/CoolieSevai.java:17:    public List<Coolie> getAllCoolies() {
+src/main/java/com/coolie/service/CoolieSevai.java:21:    public Coolie getCoolieById(Long id) {
+src/main/java/com/coolie/service/CoolieSevai.java:25:    public Coolie addCoolie(Coolie e) {
+src/main/java/com/coolie/service/CoolieSevai.java:30:    public Coolie updateCoolie(Long id, Coolie e) {
+src/main/java/com/coolie/service/CoolieSevai.java:35:    public void deleteCoolie(Long id) {
+src/main/java/com/coolie/CoolieBackendApplication.java:7:public class CoolieBackendApplication {
+src/main/java/com/coolie/CoolieBackendApplication.java:8:    public static void main(String[] args) {
+src/main/java/com/coolie/config/WebConfig.java:9:public class WebConfig {
+src/main/java/com/coolie/config/WebConfig.java:12:    public WebMvcConfigurer corsConfigurer() {
+src/main/java/com/coolie/config/WebConfig.java:15:            public void addCorsMappings(CorsRegistry registry) {
+src/main/java/com/coolie/model/Coolie.java:3:public class Coolie {
+src/main/java/com/coolie/model/Coolie.java:4:    private Long id;
+src/main/java/com/coolie/model/Coolie.java:5:    private String name;
+src/main/java/com/coolie/model/Coolie.java:6:    private String role;
+src/main/java/com/coolie/model/Coolie.java:7:    private double salary;
+src/main/java/com/coolie/model/Coolie.java:9:    public Coolie() {}
+src/main/java/com/coolie/model/Coolie.java:11:    public Coolie(Long id, String name, String role, double salary) {
+src/main/java/com/coolie/model/Coolie.java:19:    public Long getId() { return id; }
+src/main/java/com/coolie/model/Coolie.java:20:    public void setId(Long id) { this.id = id; }
+src/main/java/com/coolie/model/Coolie.java:22:    public String getName() { return name; }
+src/main/java/com/coolie/model/Coolie.java:23:    public void setName(String name) { this.name = name; }
+src/main/java/com/coolie/model/Coolie.java:25:    public String getRole() { return role; }
+src/main/java/com/coolie/model/Coolie.java:26:    public void setRole(String role) { this.role = role; }
+src/main/java/com/coolie/model/Coolie.java:28:    public double getSalary() { return salary; }
+src/main/java/com/coolie/model/Coolie.java:29:    public void setSalary(double salary) { this.salary = salary; }
