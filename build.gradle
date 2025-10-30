@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.coolie'
 version = '0.0.1-SNAPSHOT'
-description = 'Coolie Management System - Spring Boot Backend'
+description = 'Coolie project for Spring Boot'
 
 java {
     toolchain {
@@ -19,54 +19,28 @@ repositories {
 }
 
 dependencies {
-    // -------------------------------------------------
-    // ✅ Core Spring Boot Starters
-    // -------------------------------------------------
-    implementation 'org.springframework.boot:spring-boot-starter-web'          // Web + REST APIs
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'     // JPA + Hibernate ORM
-    implementation 'org.springframework.boot:spring-boot-starter-validation'// Validation annotations (@NotNull, etc.)
-    implementation 'com.h2database:h2'
-
-    // -------------------------------------------------
-    // ✅ Database
-    // -------------------------------------------------
-    runtimeOnly 'org.postgresql:postgresql'          // PostgreSQL driver (for Supabase)
-    implementation 'com.zaxxer:HikariCP'             // Connection pooling
-
-    // -------------------------------------------------
-    // ✅ JSON and Date Handling
-    // -------------------------------------------------
-    implementation 'com.fasterxml.jackson.core:jackson-databind'
-    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
-
-    // -------------------------------------------------
-    // ✅ Security (optional, for login/auth modules)
-    // -------------------------------------------------
+    // === Web + REST ===
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
 
-    // -------------------------------------------------
-    // ✅ Developer Tools
-    // -------------------------------------------------
+    // === JPA / Hibernate ===
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // === PostgreSQL Driver ===
+    runtimeOnly 'org.postgresql:postgresql:42.7.8'
+
+    // === Validation (optional but useful for DTOs and forms) ===
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // === DevTools for live reload (optional) ===
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
-    // -------------------------------------------------
-    // ✅ API Documentation (Swagger / OpenAPI)
-    // -------------------------------------------------
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
-
-
-    // -------------------------------------------------
-    // ✅ Lombok (reduces boilerplate code)
-    // -------------------------------------------------
+    // === Lombok (optional for boilerplate reduction) ===
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    // -------------------------------------------------
-    // ✅ Testing
-    // -------------------------------------------------
+    // === Unit Tests ===
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'com.h2database:h2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
